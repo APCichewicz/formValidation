@@ -1,0 +1,85 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=<device-width>, initial-scale=1.0">
+    <link rel="stylesheet" href="normalize.css">
+    <link rel="stylesheet" href="style.css">
+
+    <title>Document</title>
+</head>
+
+<body>
+    <!-- an web page split into two columns of about 35% and 75%. in the first column a background image
+         with a section in the middle of the page with a tranparent black background and a logo image.
+        in the second column the content is split into 3 sections. sections one contains a paragraph with
+        dummy text. section two contains a form element with a first name, last name, email, phone number, 
+        password, and password confirmation input elements. section three contains a submit button   -->
+    <aside>
+        <section class=" logo-area">
+            <img src="odin-lined.png" alt="The Odin Logo" class="logo-img">
+            <h1 class="logo-title dark-trans-bg logo-position">Odin</h1>
+        </section>
+    </aside>
+    <main>
+        <section>
+            <p>This is not a real online service! you know you need something like this in your life to help you realize
+                your deepest dreams. sign up <span>now</span> to get started</p>
+            <p>you <span>know</span> you want to</p>
+        </section>
+        <section>
+            <form id="Account-info" novalidate>
+                <div>
+                    <label for="first_name">First Name:</label>
+                    <input id="first_name" type="text" name="first_name" placeholder="First Name" required>
+                    <p class="warning"></p>
+                </div>
+
+                <div>
+                    <label for="last_name">Last Name:</label>
+                    <input id="last_name" type="text" name="last_name" placeholder="Last Name" required>
+                    <p class="warning"></p>
+                </div>
+
+                <div>
+                    <label for="email">Email:</label>
+                    <input id="email" type="email" name="email" placeholder="Example@gmail.com" required
+                        pattern=/^[a-zA-Z0-9._%+-]+@[a-zA-Z0-9.-]+\.[a-zA-Z]{2,}$/i>
+                    <p class="warning"></p>
+                </div>
+
+                <div>
+                    <label for="phone">Phone Number:</label>
+                    <input id="phone" type="tel" name="phone" placeholder="Phone Number" required>
+                    <p class="warning"></p>
+                </div>
+
+                <div>
+                    <label for="password">Password:</label>
+                    <input id="password" type="password" name="password" placeholder="Password" required>
+                    <p class="warning"></p>
+                </div>
+
+                <div>
+                    <label for="password_confirmation">Confirm Password:</label>
+                    <input id="password_confirmation" type="password" name="password_confirmation"
+                        placeholder="Confirm Password" required>
+                    <p class="warning"></p>
+                </div>
+
+            </form>
+        </section>
+        <section>
+            <div>
+                <button class="button" type="submit" form="Account-info">Create Account</button>
+                <button type="reset" form="Account-info">Reset</button>
+            </div>
+            <p>already have an account? <a href="#">log in</a></p>
+        </section>
+    </main>
+</body>
+<script src="index.js"></script>
+
+</html>
